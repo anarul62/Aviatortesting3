@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6.3%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 4% 21.5%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 4% 5.5%;
+    --muted-foreground: 225 5% 44.5%;
+
+    --accent: 113 90% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 6%;
+    --ring: 30 100% 50%;
+
+    --radius: 0.5rem;
+
+    --game-bg: 220 26% 4%;
+    --game-surface: 0 0% 11%;
+    --history-teal: 174 63% 40%;
+    --history-purple: 291 39% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+  50% { text-shadow: 0 2px 30px rgba(255,255,255,0.1); }
+}
+
+.animate-text-glow {
+  animation: text-glow 2s ease-in-out infinite;
+}
